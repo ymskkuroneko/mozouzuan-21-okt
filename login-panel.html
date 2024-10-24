@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--Ruler123456789012345678901234567890123456789012345678901234567890-->
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Hadiyan Azka">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Telkomsel &ndash; Login</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Outfit"
+  >
+  <style>
+  body { 
+    width: 1200px;
+    height: 580px;
+    gap: 0px;
+    opacity: 0px;
+    background-color: #110f17;
+    /* gridding: 2 kolom */
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+    /* pernyataan font global */
+    font: 100% Outfit;
+    color: white;
+  }
+  /* grid: kontainer figur ilustrasi (kolom 1 dari 2) */
+  body > figure { margin-top: 20%; margin-left: 20%; }
+  .judul img { float: left; width: 30%; height: 10%; gap: 0px; }
+  .judul p {
+    font: normal normal 100 8px/38px Outfit;
+    display: inline-block;
+  }
+  .kartukredit {
+    width: 320px;
+    height: 320px;
+    gap: 0px;
+    float: right;
+    margin-top: -5%;
+    margin-right: 36%;
+  }
+  /* grid: kontainer antarmuka login (kolom 2 dari 2) */
+  body > main { margin-top: 10%; }
+  #circle1 {
+    /* border: 1px solid #660000; */
+    margin-left: -15%; /* geser lingkaran pertama */
+  }
+  .container {
+    width: 60%;
+    height: 60%;
+    background-clip: padding-box;
+    background:
+      linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.14),
+        rgba(0, 0, 0, 0.14)
+      ),
+      linear-gradient(
+        321.23deg,
+        rgba(191, 191, 191, 0.062) 5.98%,
+        rgba(0, 0, 0, 0) 66.28%
+      );
+    backdrop-filter: blur(0.75em);
+    border: 1px solid;
+    border-color: #333333;
+    border-radius: 20px;
+    box-shadow: -8px 4px 5px 0px #0000003D;
+    padding: 15% 2.5em 10% 2.5em;
+    margin-top: -30%; /* geser kontainer ke atas */
+  }
+  .container h1 {
+    font-weight: 900;
+    font-size: 2.2em;
+    line-height: 0.8em
+  }
+  .container p {
+    font-weight: 600;
+    font-size: 0.8em;
+    letter-spacing: 0.06em;
+    line-height: 0.1em
+  }
+  .ketik {
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 0.8em;
+    box-sizing: border-box;
+    padding: 0.8em;
+    font: 1em Outfit;
+    color: white;
+  }
+
+  /* <COPAS-CHATGPT> */
+
+  /* Hide the default checkbox */
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Style for the custom checkbox container */
+  .ceklis {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    border: none;
+    background-color: gray;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Style for the label */
+  label .ceklis {
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.5em;
+    color: white;
+  }
+
+  /* Add margin between checkbox and label text
+  .ceklis + span {
+    margin-left: 10px;
+  }*/
+
+  /* This will style the checked state */
+  input[type="checkbox"]:checked + label .ceklis {
+    background: linear-gradient(180deg, #ffdb4d, #ff6600, #cc0033);
+  }
+
+  /* Add the checkmark using a pseudo-element */
+  .ceklis::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  /* Show the checkmark when checked */
+  input[type="checkbox"]:checked + label .ceklis::after {
+    opacity: 1;
+  }
+
+  /*
+  kotak ceklis
+  .ceklis {
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: gray;
+    cursor: pointer;
+  }
+  ketika dicentang
+  input[type="checkbox"]:checked + .ceklis {
+    background: linear-gradient(135deg, #ff0844, #ffb199);
+    border: none;
+  }
+  tanda centang
+  .ceklis:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: none;
+    left: 5px;
+    top: 3px;
+    transform: rotate(45deg);
+  }
+  menampilkan tanda centang ketika kotak ceklis dicentang
+  input[type="checkbox"]:checked + .ceklis:after {
+    display: block;
+  }
+  */
+
+/*
+  .container button {
+    width: 98%;
+    margin: 0 1%;
+    background: linear-gradient(135deg, #ffdb4d, #ff6600, #cc0033);
+    border: none;
+    border-radius: 0.8em;
+    padding: 4px 5px;
+    font: normal normal 500 1.2em Outfit;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s
+  }
+  .container button:hover {
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(135deg, #cc0033, #ff9933, #ff6600);
+    font-weight: 600;
+    letter-spacing: 0.02em
+  }
+*/
+
+  /* </COPAS-CHATGPT> */
+
+  .container button {
+    width: 98%;
+    margin: 0 1%;
+    background: gray;
+    border: 1px solid gray;
+    border-radius: 0.8em;
+    padding: 4px 5px;
+    font: normal normal 500 1.2em Outfit;
+    color: white;
+    cursor: pointer;
+    transition: 0.05s ease
+  }
+  .container button:hover {
+    width: 100%;
+    margin: 0;
+    border: 1px solid gray;
+    background: linear-gradient(135deg, #ffdb4d, #ff6600, #cc0033);
+    font-weight: 600;
+    letter-spacing: 0.02em
+  }
+  #fpw         { text-align: center; color: #444444; margin-top: 3% }
+  #fpw a       { text-decoration: none; color: #444444; }
+  #fpw a:hover { text-decoration: underline; color: #666666; }
+  #circle2 {
+    /* border: 1px solid #660000; */
+    /* geser lingkaran kedua */
+    margin-top: -30%;
+    margin-left: 52%;
+  }
+  </style>
+</head>
+
+<body>
+
+  <figure>
+    <div class="judul">
+      <img src="logo-telkomsel-baru 1.png">
+      <p>EDC Monitoring Dashboard</p>
+    </div>
+    <img src="set of several credit cards.png" class="kartukredit">
+  </figure>
+
+  <main>
+    <canvas id="circle1" width="200" height="200" >
+      Lingkaran 1.</canvas>
+    <form class="container">
+      <h1>Login</h1>
+      <p>Fill Username & Password!</p>
+      <label>
+        <input
+          class="ketik"
+          type="text"
+          placeholder="Username"
+          name="uname"
+          required
+        >
+      </label>
+      <br>
+      <label>
+        <input
+          class="ketik"
+          type="password"
+          placeholder="Password"
+          name="psw"
+          required
+        >
+      </label>
+      <br>
+      <!-- ceklis -->
+      <input type="checkbox" id="ceklis">
+      <label for="ceklis">
+        <span class="ceklis"></span>
+        <span
+          style="font-size:0.9em;color:lightgray;"
+        >
+          Remember me
+        </span>
+      </label>
+      <!-- /ceklis -->
+      <br><br>
+      <button type="submit">Login</button>
+      <br>
+      <div id="fpw">Forgot <a href="#">password</a>?</div>
+    </form>
+    <canvas id="circle2" width="200" height="200">
+      Lingkaran 2.</canvas>
+  </main>
+
+  <!-- dua lingkaran di belakang kontainer formulir -->
+  <script>
+    // lingkaran 1
+    const c1 = document.getElementById("circle1");
+    const ctx1 = c1.getContext("2d");
+      // gradien 1
+      const grd1 = ctx1.createLinearGradient(0,0,0,160);
+      grd1.addColorStop(0,"#530061");
+      grd1.addColorStop(1,"#0d0a30");
+    ctx1.beginPath();
+    ctx1.arc(100, 100, 75, 0, 2*Math.PI);
+    ctx1.fillStyle = grd1;
+    ctx1.fill();
+    // lingkaran 2
+    const c2 = document.getElementById("circle2");
+    const ctx2 = c2.getContext("2d");
+      // gradien 2
+      const grd2 = ctx2.createLinearGradient(0,0,80,170);
+      grd2.addColorStop(0,"#300061");
+      grd2.addColorStop(1,"#0a1030");
+    ctx2.beginPath();
+    ctx2.arc(100, 100, 100, 0, 2*Math.PI);
+    ctx2.fillStyle = grd2;
+    ctx2.fill();
+  </script>
+
+</body>
+</html>
